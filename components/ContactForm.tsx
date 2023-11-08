@@ -1,9 +1,10 @@
-import React, { ChangeEvent, FormEvent, useState} from 'react';
 import axios, { AxiosResponse } from 'axios';
+import React, { ChangeEvent, FormEvent, useState} from 'react';
 
 import styles from './ContactForm.module.css';
 
-export default () => {
+
+const ContactForm = () => {
   const [status, setStatus] = useState({
     submitted: false,
     submitting: false,
@@ -72,7 +73,7 @@ export default () => {
   const messageLabelColor = inputs.message.length == 0 ? 'text-white': 'text-gray-700';
   return (
     <div className={`flex flex-col max-w-xs ${styles.contactForm}`}>
-      <h3 className='mb-3 text-xl'>I'm All Ears</h3>
+      <h3 className='mb-3 text-xl'>I&apos;m All Ears</h3>
       <hr />
       <form onSubmit={handleOnSubmit} className="flex flex-col bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 ">
         <div className="mb-4">
@@ -118,3 +119,5 @@ export default () => {
     </div>
   );
 };
+
+export default ContactForm;

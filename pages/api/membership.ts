@@ -1,8 +1,9 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextApiRequest, NextApiResponse } from 'next';
 
-export default async function membership(req: NextRequest, res: NextResponse) {
+export default async function membership(req: NextApiRequest, res: NextApiResponse) {
   // get submitted form data from request body
-  const body = await req.json();
+  const body = JSON.parse(req.body());
 
-  res.blob('text/plain', 'Hello World');
+  res.status(200).json({ body });
+
 }
