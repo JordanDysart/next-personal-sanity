@@ -73,7 +73,7 @@ const ContactForm = () => {
   const messageLabelColor = inputs.message.length == 0 ? 'text-white': 'text-gray-700';
   return (
     <div className={`flex flex-col max-w-xs ${styles.contactForm}`}>
-      <h3 className='mb-3 text-xl'>I&apos;m All... Mostly Ears</h3>
+      <h3 className='mb-3 text-xl'>I&apos;m All... I&apos;m Mostly Ears</h3>
       <hr />
       <form onSubmit={handleOnSubmit} className="flex flex-col bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 ">
         <div className="mb-4">
